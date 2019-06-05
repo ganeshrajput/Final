@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Tabs Using Bootstrap</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Tabs Demo </h2>
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Simple Form</a></li>
+    <li><a data-toggle="tab" href="#menu1">Form with Javascript And Bootstrap</a></li>
+    
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+         <h1><marquee direction="right">User Registration Form</marquee></h1>
+          <form id="reg" method="post" name="myform" >
+             <label>First name:</label><br>
+		<input type="text"name="fname"placeholder="Enter your First name"id="name">
+			<br><br>
+             <label>Last name:</label><br>
+		<input type="text"name="lname"placeholder="Enter your last name"id="name">
+			<br><br>
+             <label>Email:</label><br>
+		<input type="email"name="email"placeholder="Enter your Email"id="name">
+			<br><br>
+             <label> Password:</label><br>
+		<input type="password"name="pass"placeholder="Enter your Password"id="name">
+			<br><br>
+             <label>Confirm Password:</label><br>
+		<input type="password"name="cpass"placeholder="Enter your confirm Password"id="name">
+			<br><br>
+             <label>Mobile no:</label><br>
+		<input type="number"name="number"placeholder="Enter your Mobile no"id="name">
+			<br><br>
+             <label>Date of birth:</label><br>
+		<input type="date"name="date"id="name">
+			<br><br>
+		<label>Gender:</label><br>
+		<input type="radio"name="sex"id="ma"><span id="ma">Male</span>
+		<input type="radio"name="sex"id="ma"><span id="ma">Female</span>
+			<br><br>
+		<label>upload Resume:</label><br>
+		 <input type="file" name="pic" accept="audio/*|video/*|image/*|media_type">
+				<br><br>
+		<button type="Submit">Submit </button>
+             
+
+         </form>
+              
+
+       </div>
+    <div id="menu1" class="tab-pane fade">
+      
+       <div class="container"><br>
+		<div class="col-lg-6 m-auto d-block">
+			<h1>User Registration Form</h1>
+			<form action="#" onsubmit="return validation()" class="bg-light">
+				
+				<div class="form-group">
+					<label for="name" class="font-weight-bold"> Name: </label>
+					<input type="text" name="name" class="form-control" id="name" >
+					<span id="namefield" class="text-danger font-weight-bold"> </span>
+				</div>
+				<div class="form-group">
+					<label for="user" class="font-weight-bold"> Username: </label>
+					<input type="text" name="user" class="form-control" id="user" >
+					<span id="username" class="text-danger font-weight-bold"> </span>
+				</div>
+
+				<div class="form-group">
+					<label class="font-weight-bold"> Password: </label>
+					<input type="password" name="pass" class="form-control" id="pass" autocomplete="off">
+					<span id="passwords" class="text-danger font-weight-bold"> </span>
+				</div>
+
+				<div class="form-group">
+					<label class="font-weight-bold"> Confirm Password: </label>
+					<input type="" name="conpass" class="form-control" id="conpass" autocomplete="off">
+					<span id="confrmpass" class="text-danger font-weight-bold"> </span>
+				</div>
+
+				<div class="form-group">
+					<label class="font-weight-bold"> Mobile Number: </label>
+					<input type="text" name="mobile" class="form-control" id="mobileNumber" autocomplete="off">
+					<span id="mobileno" class="text-danger font-weight-bold"> </span>
+				</div>
+
+				<div class="form-group">
+					<label class="font-weight-bold"> Email: </label>
+					<input type="text" name="email" class="form-control" id="emails" autocomplete="off">
+					<span id="emailids" class="text-danger font-weight-bold"> </span>
+				</div>
+
+				
+	
+				<div>  <label class="font-weight-bold"> Gender : </label>
+					<label class="form-group"><input type="radio" name="optradio" checked>Male</label>
+					<label class="form-group"><input type="radio" name="optradio">Female</label>
+					<span id="gendersid" class="text-danger font-weight-bold"> </span>
+				</div>
+				<div class="form-group">
+					<label class="font-weight-bold"> Select Country: </label>
+					<select>
+					<option Value = "India">India</option>
+					<option Value = "America">America</option>
+					<option Value = "Canada">Canada</option>	 
+					<option Value = "Bangaladesh">Bangladesh</option>
+					</select>
+					<span id="countrys" class="text-danger font-weight-bold"> </span>
+				</div>
+				<div class="form-group">
+					<label class="font-weight-bold"> Select File: </label>
+					<input type="file" name="email" class="form-control" id="files">
+					<span id="filess" class="text-danger font-weight-bold"> </span>
+				</div>
+				
+				
+				<input type="submit" name="submit" value="submit" onClick="validation()" class="btn btn-success" >
+				
+							
+	
+
+			</form><br><br>
+
+
+		</div>
+        
+
+
+	<script type="text/javascript">
+		
+
+		function validation(){
+			var name = document.getElementById('name').value;
+			var user = document.getElementById('user').value;
+			var pass = document.getElementById('pass').value;
+			var confirmpass = document.getElementById('conpass').value;
+			var mobileNumber = document.getElementById('mobileNumber').value;
+			var emails = document.getElementById('emails').value;
+
+
+			if(name == "")
+				{
+				document.getElementById('namefield').innerHTML ="** Fill Name Field Properly";
+			}
+			
+			if(user == ""){
+				document.getElementById('username').innerHTML =" ** Please fill the username field";
+				return false;
+			}
+			if((user.length <= 2) || (user.length > 20)) {
+				document.getElementById('username').innerHTML =" ** Username lenght must be between 2 and 20";
+				return false;	
+			}
+			if(!isNaN(user)){
+				document.getElementById('username').innerHTML =" ** only characters are allowed";
+				return false;
+			}
+
+
+
+
+
+
+
+			if(pass == ""){
+				document.getElementById('passwords').innerHTML =" ** Please fill the password field";
+				return false;
+			}
+			if((pass.length <= 5) || (pass.length > 20)) {
+				document.getElementById('passwords').innerHTML =" ** Passwords lenght must be between  5 and 20";
+				return false;	
+			}
+
+
+			if(pass!=confirmpass){
+				document.getElementById('confrmpass').innerHTML =" ** Password does not match the confirm password";
+				return false;
+			}
+
+
+
+			if(confirmpass == ""){
+				document.getElementById('confrmpass').innerHTML =" ** Please fill the confirmpassword field";
+				return false;
+			}
+
+
+
+
+			if(mobileNumber == ""){
+				document.getElementById('mobileno').innerHTML =" ** Please fill the mobile NUmber field";
+				return false;
+			}
+			if(isNaN(mobileNumber)){
+				document.getElementById('mobileno').innerHTML =" ** user must write digits only not characters";
+				return false;
+			}
+			if(mobileNumber.length!=10){
+				document.getElementById('mobileno').innerHTML =" ** Mobile Number must be 10 digits only";
+				return false;
+			}
+
+
+
+			if(emails == ""){
+				document.getElementById('emailids').innerHTML =" ** Please fill the email idx` field";
+				return false;
+			}
+			if(emails.indexOf('@') <= 0 ){
+				document.getElementById('emailids').innerHTML =" ** @ Invalid Position";
+				return false;
+			}
+
+			if((emails.charAt(emails.length-4)!='.') && (emails.charAt(emails.length-3)!='.')){
+				document.getElementById('emailids').innerHTML =" ** . Invalid Position";
+				return false;
+			}
+		}
+
+	</script>
+                
+
+
+
+    </div>
+    
+  </div>
+</div>
+
+</body>
+</html>
