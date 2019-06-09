@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link rel="stylesheet" href="home.css">
+    <title></title>
+  </head>
+  <body>
+    <center>
+    <div id="add_sub">
+      <form class="" action="index.html" method="post" id="subject" >
+        <br>
+        <h1>Add a Subject</h1>
+        <table cellpadding=10 id="sb">
+          <tr>
+            <td>Class:</td>
+            <td><select  name="cls">
+              <option value="First year">10</option>
+              <option value="Second year">11</option>
+              <option value="Third year">12</option>
+              <option value="Final year">BTech</option>
+            </select></td>
+          </tr>
+          <tr>
+            <td>Subject Name:</td>
+            <td><select  name="cls">
+              <option value="Data Structure">Maths</option>
+              <option value="Web Technology">Science</option>
+              <option value="Database">History</option>
+              <option value="Software">Geogrophy</option>
+            </select></td>
+          </tr>
+          <tr>
+            <td>Board:</td>
+            <td><select  name="cls">
+              <option value="Mumbai">CBSC</option>
+              <option value="Nagpur">Maharashtra</option>
+              <option value="Nashik">pune</option>
+              <option value="Amravati">Amravati</option>
+            </select></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><input type="submit" name="submit" value="Submit"id="btn" v-on:click="add()"></td>
+          </tr>
+
+        </table>
+      </form>
+    </div>
+    <script type="text/javascript" src="addSubject.js"></script>
+
+  </body>
+</html>
